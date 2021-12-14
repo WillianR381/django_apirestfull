@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import Avaliacao, Curso
 
-class AvaliacaoSerializers(serializers.ModelSerializer):
+class AvaliacaoSerializer(serializers.ModelSerializer):
   class Meta:
     # Configs extras
     extra_kargs = {
@@ -21,10 +21,10 @@ class AvaliacaoSerializers(serializers.ModelSerializer):
       'ativo',
     )
 
-class CursoSerializers(serializers.ModelSerializer):
+class CursoSerializer(serializers.ModelSerializer):
   class Meta:
     model = Curso
-    fiedls = (
+    fields = (
       'id',
       'titulo',
       'url',
